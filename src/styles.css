@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(255, 215, 228, 0.85), transparent 30rem),
+    radial-gradient(circle at 85% 5%, rgba(220, 247, 223, 0.9), transparent 24rem),
+    #fff8ec;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@layer components {
+  .pretty-card {
+    @apply rounded-[28px] border border-white/80 bg-white/60 shadow-soft backdrop-blur;
+  }
+
+  .hero-band {
+    @apply flex min-h-[230px] items-center justify-between overflow-hidden rounded-[34px] border border-white/80 bg-gradient-to-br from-white/80 via-blush/60 to-mint/80 p-6 shadow-soft md:p-10;
+  }
+
+  .detail-hero {
+    @apply flex flex-col gap-5 rounded-[34px] border border-white/80 bg-gradient-to-br from-white/80 via-yolk/40 to-blush/60 p-6 shadow-soft md:flex-row md:items-center md:p-8;
+  }
+
+  .recipe-card {
+    @apply rounded-[28px] border border-white/80 bg-white/65 p-4 shadow-soft backdrop-blur;
+  }
+
+  .primary-btn {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-2xl bg-roseTea px-4 py-2 text-sm font-black text-white shadow-soft transition hover:brightness-105 active:scale-[.99];
+  }
+
+  .ghost-btn {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-2xl bg-white/75 px-4 py-2 text-sm font-black text-ink ring-1 ring-blush/60 transition hover:bg-white active:scale-[.99];
+  }
+
+  .icon-btn {
+    @apply grid h-11 w-11 place-items-center rounded-2xl bg-white/80 text-ink ring-1 ring-blush/60 transition hover:bg-blush/70 active:scale-[.98];
+  }
+
+  .tag-btn {
+    @apply rounded-full bg-white/80 px-3 py-2 text-sm font-bold text-ink ring-1 ring-blush/60 transition hover:bg-blush/50;
+  }
+
+  .tag-btn-active {
+    @apply bg-roseTea text-white ring-roseTea;
+  }
+
+  .soft-chip {
+    @apply rounded-full bg-mint/80 px-3 py-1 text-xs font-extrabold text-ink/75;
+  }
+
+  .danger-chip {
+    @apply rounded-full bg-yolk px-3 py-1 text-xs font-extrabold text-ink;
+  }
+
+  .match-badge {
+    @apply shrink-0 rounded-2xl bg-yolk px-3 py-2 text-sm font-black text-ink;
+  }
+
+  .field {
+    @apply block text-sm font-bold text-ink/75;
+  }
+
+  .field > span {
+    @apply mb-1 block;
+  }
+
+  .input {
+    @apply min-h-11 w-full rounded-2xl border border-blush/70 bg-white/80 px-3 py-2 text-ink outline-none transition placeholder:text-ink/35 focus:border-roseTea focus:ring-4 focus:ring-blush/55;
+  }
+
+  .toggle {
+    @apply min-h-11 w-full rounded-2xl bg-white/80 px-3 py-2 font-black text-ink ring-1 ring-blush/70 transition;
+  }
+
+  .toggle-on {
+    @apply bg-mint ring-leaf;
+  }
+
+  .nav-pill {
+    @apply inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm font-bold text-ink/65 transition hover:bg-white;
+  }
+
+  .nav-pill-active {
+    @apply bg-blush text-ink;
+  }
+
+  .mobile-tab {
+    @apply flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-3xl text-[10px] font-bold text-ink/55 transition;
+  }
+
+  .mobile-tab-active {
+    @apply bg-blush text-ink;
+  }
+}
